@@ -25,6 +25,7 @@
             var year = date.getFullYear();
             var age = year - yearOfBirth;
             var message = Message.replace("<first_name>", firstName);
+            message = message.replace("<year-of-birth>", yearOfBirth);
             message = message.replace("<age>", age);
             document.getElementById("name-result").innerHTML = firstName + " " + lastName;
             document.getElementById("person-info-result").innerHTML = message;
