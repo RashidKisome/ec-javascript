@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>EC-Exempel 1</title>
+    <style>
+        button {font-size: 16px;}
+    </style>
+    <script>
+    var EcText = "EC Utbildning";
+        function clickScript() {
+            alert('jag har klickat script');
+        }
+
+    </script>
+</head>
+<body>
+    <h1>EC Utbildning - Exempel 1</h1>
+    <h2>Detta är bara början</h2>
+    <p>
+        <button onclick="alert('Jag har klickat!');">Klicka Här</button>
+    </p>
+    <p>
+        <button onclick="clickScript();">Klicka Script</button>
+    </p>
+    <p>
+        <button id="event-button" >Klicka Event</button>
+    </p>
+
+    <p id="demo-event"></p>
+
+    <script>
+    document.getElementById("event-button").addEventListener("click", clickEvent);
+    function clickEvent() {
+        document.getElementById("demo-event").innerHTML = "DETTA ÄR ETT EVENT";
+        alert('jag har klickat Event');
+    }
+    </script>
+</body>
+</html>
