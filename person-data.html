@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Exempel Person data</title>
+    <style>
+    body {font-family: Verdana, Helvetica, Arial}
+        button {font-size: 18px; margin-top: 6px;}
+        input {font-size:16px;}
+        p {font-size: 16px;margin: 6px 0 4px 0}
+        div.clear {
+            clear: both;
+        }
+    </style>
+    <script>
+        var Message = 'Hej <first_name>! <br><br>Du är född år <year-of-birth> och är <age> år gammal i år.';
+
+        function checkPerson() {
+            var firstName = document.getElementById("first-name").value;
+            var lastName = document.getElementById("last-name").value;
+            var yearOfBirth = document.getElementById("year-of-birth").value;
+            var date = new Date();
+            var year = date.getFullYear();
+            var age = year - yearOfBirth;
+            var message = Message.replace("<first_name>", firstName);
+            message = message.replace("<age>", age);
+            document.getElementById("name-result").innerHTML = firstName + " " + lastName;
+            document.getElementById("person-info-result").innerHTML = message;
+            document.getElementById("person-info-container").style.display="block";
+        }
+        function closePerson() {
+            document.getElementById("person-info-container").style.display="none";
+        }
+    </script>
+</head>
+<body>
+    <div id="person-data-container" style="width:40%; float:left;">
+        <h1>Person data</h1>
+        <form>
+            <p>Förnamn</p>
+            <p><input type="text" id="first-name"></p>
+            <p>Efternamn</p>
+            <p><input type="text" id="last-name"></p>
+            <p>Födelseår</p>
+            <p><input type="text" id="year-of-birth"></p>
+        </form>
+        <p>
+            <button id="event-button" >Kontrollera Person</button>
+        </p>
+    </div>
+
+    <div id="person-info-container" style="width:40%; float:left; display:none">
+        <h1>Info</h1>
+        <span><strong>Namn:</strong> <span id="name-result"></span>
+        <div id="person-info-result" style="border: 1px solid #cccccc;padding: 6px; margin-top: 8px;"></div>
+        <p>
+            <button id="event-close" >Stäng info</button>
+        </p>
+    </div>
+
+    <div class="clear"></div>
+
+    <script>
+        document.getElementById("event-button").addEventListener("click", checkPerson);
+        document.getElementById("event-close").addEventListener("click", closePerson);
+    </script>
+
+</body>
+</html>
