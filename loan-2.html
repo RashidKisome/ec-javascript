@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Lån 1</title>
+    <style>
+    body {font-family: Verdana, Helvetica, Arial}
+        button {font-size: 18px; margin-top: 6px;}
+        input {font-size:16px;}
+        p {font-size: 16px;margin: 6px 0 4px 0}
+        div.clear {
+            clear: both;
+        }
+    </style>
+    <script>
+        var Helper = {};
+        Helper.show = function (tag) {
+            document.getElementById(tag).style.display="block";
+        }
+        Helper.hide = function (tag) {
+            document.getElementById(tag).style.display="none";
+        }
+        Helper.setValue = function (tag, value) {
+            document.getElementById(tag).value = value;
+        }
+        Helper.getValue = function (tag) {
+            return document.getElementById(tag).value;
+        }
+        Helper.setHtml = function (tag, html) {
+            document.getElementById(tag).innerHTML = html;
+        }
+        Helper.getHtml = function (tag) {
+            return document.getElementById(tag).innerHTML;
+        }
+        Helper.onClick = function (tag, action) {
+            document.getElementById(tag).addEventListener("click", action);
+        }
+
+        function eLoanCalculate() {
+            var loanAmount = Number(Helper.getValue("loan-amount"));
+            var loanMonth = Number(Helper.getValue("loan-month"));
+            var interest = Number(Helper.getValue("interest"));
+
+            var restAmount = loanAmount;
+            var montlyRepay = loanAmount / loanMonth;
+            html = '<table>';
+            html += '<tr><th>Månad</th><th>Amortering</th><th>Ränta</th><th>Att betala</th><th>Balans</th></tr>';
+            for (let i=0; i<loanMonth; i++){
+                let interestToPay = Math.round(restAmount * interest / 100 / 12);
+
+                let rePay = montlyRepay + interestToPay;
+                let toPay = rePay + interestToPay;
+                restAmount = restAmount - montlyRepay;
+                let month = i + 1;
+                //alert(month + ' : ' + rePay + ' : ' + interestToPay + ' : ' + restAmount)
+                html += '<tr>';
+                html += '<td>' + month +  '</td>';
+                html += '<td>' + Math.round(rePay) +  '</td>';
+                html += '<td>' + Math.round(interestToPay) +  '</td>';
+                html += '<td>' + Math.round(toPay) +  '</td>';
+                html += '<td>' + Math.round(restAmount) +  '</td>';
+                html += '</tr>';
+            }
+            html += '</table>';
+            Helper.setHtml('loan-result', html);
+            Helper.show('loan-result-container')
+        }
+        function eClearLoan() {
+            Helper.hide("loan-result-container");
+            Helper.setValue("loan-amount", "");
+            Helper.setValue("loan-month", "");
+            Helper.setValue("interest", "");
+        }
+    </script>
+</head>
+<body>
+    <div id="loan-input-container" style="width:40%; float:left;">
+        <h1>Låneberäkning</h1>
+        <form>
+            <p>Lånebelopp i kronor</p>
+            <p><input type="number" id="loan-amount" value="1999"></p>
+            <p>Lånetid i månader</p>
+            <p><input type="number" id="loan-month" value="7"></p>
+            <p>Ränta i procent</p>
+            <p><input type="number" id="interest" value="3"></p>
+        </form>
+        <p>
+            <button id="eLoanCalculate">Beräkna lån</button>
+        </p>
+    </div>
+
+    <div id="loan-result-container" style="width:40%; float:left; display:none">
+        <h1>Låne beräknings resultat</h1>
+        <div id="loan-result"></div>
+        <p>
+            <button id="eClearLoan">Rensa</button>
+        </p>
+    </div>
+
+    <div class="clear"></div>
+
+    <script>
+        Helper.onClick("eLoanCalculate", eLoanCalculate);
+        Helper.onClick("eClearLoan", eClearLoan);
+    </script>
+
+</body>
+</html>
