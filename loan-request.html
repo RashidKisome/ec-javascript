@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Låneförfrågan</title>
+    <style>
+    body {font-family: Verdana, Helvetica, Arial}
+        button {font-size: 18px; margin-top: 6px;}
+        input {font-size:16px;}
+        p {font-size: 16px;margin: 6px 0 4px 0}
+        .left-div {width:40%; float:left;}
+        div.clear {
+            clear: both;
+        }
+    </style>
+    <script>
+        var Helper = {};
+        Helper.show = function (tag) {
+            document.getElementById(tag).style.display="block";
+        }
+        Helper.hide = function (tag) {
+            document.getElementById(tag).style.display="none";
+        }
+        Helper.setValue = function (tag, value) {
+            document.getElementById(tag).value = value;
+        }
+        Helper.getValue = function (tag) {
+            return document.getElementById(tag).value;
+        }
+        Helper.setHtml = function (tag, html) {
+            document.getElementById(tag).innerHTML = html;
+        }
+        Helper.getHtml = function (tag) {
+            return document.getElementById(tag).innerHTML;
+        }
+        Helper.onClick = function (tag, action) {
+            document.getElementById(tag).addEventListener("click", action);
+        }
+
+        var LoanApplication = {};
+
+        function eLoanCalculate () {
+
+            LoanApplication.loanAmount = Number(Helper.getValue("loan-amount"));
+            LoanApplication.loanMonth = Number(Helper.getValue("loan-month"));
+            LoanApplication.firstName = Helper.getValue("first-name");
+            LoanApplication.lastName = Helper.getValue("last-name");
+            LoanApplication.email = Helper.getValue("email");
+
+            html += "<p>";
+            var html = LoanApplication.firstName + " " + LoanApplication.lastName;
+            html += "</p><p>";
+            html += LoanApplication.email;
+            html += "</p><p>";
+            html += "Ansökt belopp: " + LoanApplication.loanAmount;
+            html += "</p><p>";
+            html += "Återbetalningstid: " + LoanApplication.loanMonth;
+            html += "</p><p>";
+            if (LoanApplication.loanAmount <= 2000 || LoanApplication.loanAmount > 200000) {
+                html += "Medges ej";
+                html += "</p>";
+            } else {
+                if (LoanApplication.loanAmount <= 5000) {
+                    LoanApplication.interest = 25;
+                }
+                else if (LoanApplication.loanAmount < 15000) {
+                    LoanApplication.interest = 20;
+                }
+                else if (LoanApplication.loanAmount < 50000) {
+                    LoanApplication.interest = 15;
+                }
+                else if (LoanApplication.loanAmount < 100000) {
+                    LoanApplication.interest = 12;
+                }
+                else if (LoanApplication.loanAmount < 150000) {
+                    LoanApplication.interest = 10;
+                }
+                else if (LoanApplication.loanAmount <= 200000) {
+                    LoanApplication.interest = 5;
+                }
+                LoanApplication.payEachMonth = Math.round(LoanApplication.loanAmount / LoanApplication.loanMonth);
+                html += "Återsränta: " + LoanApplication.interest;
+                html += "</p><p>";
+                html += "Amortering per månad: " + LoanApplication.payEachMonth;
+                html += "</p><p>";
+
+            }
+            Helper.setHtml('loan-result', html);
+            Helper.show('loan-result-container')
+
+        }
+
+        function eClearLoan() {
+            Helper.hide("loan-result-container");
+            // Helper.setValue("loan-amount", "");
+            //Helper.setValue("loan-month", "");
+        }
+
+    </script>
+</head>
+<body>
+    <div id="loan-input-container" class="left-div">
+        <h1>Låneförfrågan</h1>
+        <form>
+            <p>Förnamn</p>
+            <p><input type="text" id="first-name" value="Kalle"></p>
+            <p>Efternamn</p>
+            <p><input type="text" id="last-name" value="Carlsson"></p>
+            <p>E-post</p>
+            <p>Måndaslön</p>
+            <p><input type="number" id="month-salary" value="25000"></p>
+            <p><input type="text" id="email" value="kalle@yahoo.com"></p>
+            <p>Lånebelopp i kronor</p>
+            <p><input type="number" id="loan-amount" value="1999"></p>
+            <p>Lånetid i månader</p>
+            <p><input type="number" id="loan-month" value="7"></p>
+        </form>
+        <p>
+            <button id="eLoanCalculate">Sänd förfrågan</button>
+        </p>
+    </div>
+
+    <div id="loan-result-container" class="left-div" style="display:none">
+        <h1>Besked</h1>
+        <div id="loan-result"></div>
+        <p>
+            <button id="eClearLoan">Rensa</button>
+        </p>
+    </div>
+
+    <div class="clear"></div>
+
+    <script>
+        alert('Start');
+        Helper.onClick("eLoanCalculate", eLoanCalculate);
+        Helper.onClick("eClearLoan", eClearLoan);
+    </script>
+
+</body>
+</html>
