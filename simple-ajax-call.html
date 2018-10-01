@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script src="helper.js"></script>
+
+  <title>Simple Ajax Call</title>
+
+</head>
+
+<body>
+  <p>
+    <button id="ajax-result">Hamta</button>
+  </p>
+  <div id="resultat" style="width:100%; float:left;">
+  </div>
+
+
+
+  <script>
+    function hamta() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () { //vad ska vi göra då när vi lyssnar?
+
+        if (this.readyState == 4 && this.status == 200) {
+          //Helper.setHtml("resultat", this.responseText);
+          alert(this.responseText);
+
+        }
+        //else {
+        //alert("fel:hamta");
+        //}
+      }
+      xhttp.open("GET", "service-simple.php", true);
+      xhttp.send();
+    };
+
+    Helper.onClick("ajax-result", hamta);
+  </script>
+
+</body>
+
+</html>
