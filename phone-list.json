@@ -1,0 +1,275 @@
+
+[
+    {
+        "marke" : "Apple",
+        "model" : "Apple iPhone 8 64GB",
+        "pris" : "6700",
+        "storlek" : "4,7",
+        "os" : "Apple iOS 12",
+        "pixels" : "750x1334"
+    },
+    {
+        "marke" : "Apple",
+        "model" : "Apple iPhone X 64GB",
+        "pris" : "10190",
+        "storlek" : "5,8",
+        "os" : "Apple iOS 122",
+        "pixels" : "1125x2436"
+    },
+    {
+        "marke" : "Samsung",
+        "model" : "Samsung Galaxy S9 SM-G960F/DS 64GB",
+        "pris" : "6090",
+        "storlek" : "5,8",
+        "os" : "Android 8.0 (Oreo)",
+        "pixels" : "1440x2960"
+    },
+    {
+        "marke" : "Apple",
+        "model" : "Apple iPhone XS 64GB",
+        "pris" : "12489",
+        "storlek" : "5,8",
+        "os" : "Apple iOS 12",
+        "pixels" : "1125x2436"
+    },
+    {
+        "marke" : "Samsung",
+        "model" : "Samsung Galaxy S9 Plus SM-G965F/DS 64GB",
+        "pris" : "7100",
+        "storlek" : "6,2",
+        "os" : "Android 8.0 (Oreo)",
+        "pixels" : "1440x2960"
+    },
+    {
+        "marke" : "Huawei",
+        "model" : "Huawei P20 Pro Dual SIM 128GB",
+        "pris" : "7299",
+        "storlek" : "6,1",
+        "os" : "Android 8.1 (Oreo)",
+        "pixels" : "1080x2240"
+    },
+    {
+        "marke" : "Apple",
+        "model" : "Apple iPhone 7 32GB",
+        "pris" : "5445",
+        "storlek" : "4,7",
+        "os" : "Apple iOS 12",
+        "pixels" : "750x1334"
+    },
+    {
+        "marke" : "Xiaomi",
+        "model" : "Xiaomi Pocophone F1 64GB",
+        "pris" : "3673",
+        "storlek" : "6,18",
+        "os" : "Android 8.1 (Oreo)",
+        "pixels" : "1080x2246"
+    },
+    {
+        "marke" : "Samsung",
+        "model" : "Samsung Galaxy S8 SM-G950F 64GB",
+        "pris" : "4821",
+        "storlek" : "5,8",
+        "os" : "Android 8.0 (Oreo)",
+        "pixels" : "1440x2960"
+    },
+    {
+        "marke" : "OnePlus",
+        "model" : "OnePlus 6 128GB",
+        "pris" : "5799",
+        "storlek" : "6,28",
+        "os" : "Android 8.1 (Oreo)",
+        "pixels" : "1080x2280"
+    },
+    {
+        "marke" : "Apple",
+        "model" : "Apple iPhone 8 Plus 64GB",
+        "pris" : "8320",
+        "storlek" : "5,5",
+        "os" : "Apple iOS 12",
+        "pixels" : "1080x1920"
+    },
+    {
+        "marke" : "Apple",
+        "model" : "Apple iPhone XS Max 64GB",
+        "pris" : "13978",
+        "storlek" : "6,5",
+        "os" : "Apple iOS 12",
+        "pixels" : "1242x2688"
+    },
+    {
+        "marke" : "Huawei",
+        "model" : "Huawei P20 Lite Dual SIM 64GB",
+        "pris" : "3097",
+        "storlek" : "5,84",
+        "os" : "Android 8.0 (Oreo)",
+        "pixels" : "1080x2280"
+    },
+    {
+        "marke" : "Samsung",
+        "model" : "Samsung Galaxy Note 9 SM-N960F/DS 128GB",
+        "pris" : "9528",
+        "storlek" : "6,4",
+        "os" : "Android 8.1 (Oreo)",
+        "pixels" : "1440x2960"
+    },
+    {
+        "marke" : "Huawei",
+        "model" : "Huawei Mate 10 Pro Dual SIM 128GB",
+        "pris" : "4805",
+        "storlek" : "6",
+        "os" : "Android 8.0 (Oreo)",
+        "pixels" : "1080x2160"
+    },
+    {
+        "marke" : "Samsung",
+        "model" : "Samsung Galaxy S7 SM-G930F 32GB",
+        "pris" : "3490",
+        "storlek" : "5,1",
+        "os" : "Android 8.0 (Oreo)",
+        "pixels" : "1440x2560"
+    },
+    {
+        "marke" : "Apple",
+        "model" : "Apple iPhone SE 32GB",
+        "pris" : "2897",
+        "storlek" : "4",
+        "os" : "Apple iOS 12",
+        "pixels" : "640x1136"
+    },
+    {
+        "marke" : "Samsung",
+        "model" : "Samsung Galaxy A8 2018 SM-A530F/DS",
+        "pris" : "3402",
+        "storlek" : "5,6",
+        "os" : "Android 7.1 (Nougat)",
+        "pixels" : "1080x2220"
+    },
+    {
+        "marke" : "Apple",
+        "model" : "Apple iPhone 6 32GB",
+        "pris" : "3425",
+        "storlek" : "4,7",
+        "os" : "Apple iOS 12",
+        "pixels" : "750x13342"
+    },
+    {
+        "marke" : "Apple",
+        "model" : "Apple iPhone 6s 32GB",
+        "pris" : "4290",
+        "storlek" : "4,7",
+        "os" : "Apple iOS 12",
+        "pixels" : "750x1334"
+    },
+    {
+        "marke" : "Apple",
+        "model" : "Apple iPhone X 256GB",
+        "pris" : "11650",
+        "storlek" : "5,8",
+        "os" : "Apple iOS 12",
+        "pixels" : "1125x2436"
+    },
+    {
+        "marke" : "LG",
+        "model" : "LG G7 ThinQ LMG710",
+        "pris" : "5448",
+        "storlek" : "6,1",
+        "os" : "Android 8.0 (Oreo)",
+        "pixels" : "1440x3120"
+    },
+    {
+        "marke" : "Sony",
+        "model" : "Sony Xperia XZ2 Compact Dual H8324",
+        "pris" : "4690",
+        "storlek" : "5",
+        "os" : "Android 8.0 (Oreo)",
+        "pixels" : "1080x2160"
+    },
+    {
+        "marke" : "Xiaomi",
+        "model" : "Xiaomi Mi A2 64GB",
+        "pris" : "2479",
+        "storlek" : "5,99",
+        "os" : "Android 8.1 (Oreo)",
+        "pixels" : "1080x2160"
+    },
+    {
+        "marke" : "Samsung",
+        "model" : "Samsung Galaxy S8 Plus SM-G955F 64GB",
+        "pris" : "5444",
+        "storlek" : "6,2",
+        "os" : "Android 8.0 (Oreo)",
+        "pixels" : "1440x2960"
+    },
+    {
+        "marke" : "Apple",
+        "model" : "Apple iPhone XR 64GB",
+        "pris" : "9495",
+        "storlek" : "6,1",
+        "os" : "Apple iOS 12",
+        "pixels" : "828x1792"
+    },
+    {
+        "marke" : "Samsung",
+        "model" : "Samsung Galaxy Note 8 SM-N950F/DS 64GB",
+        "pris" : "6950",
+        "storlek" : "6,3",
+        "os" : "Android 8.0 (Oreo)",
+        "pixels" : "1440x2960"
+    },
+    {
+        "marke" : "OnePlus",
+        "model" : "OnePlus 6 64GB",
+        "pris" : "5090",
+        "storlek" : "6,28",
+        "os" : "Android 8.1 (Oreo)",
+        "pixels" : "1080x2280"
+    },
+    {
+        "marke" : "Asus",
+        "model" : "Asus ZenFone 5Z ZS620KL (6GB RAM) 64GB",
+        "pris" : "4490",
+        "storlek" : "6,2",
+        "os" : "Android 8.0",
+        "pixels" : "1080x2246"
+    },
+    {
+        "marke" : "Apple",
+        "model" : "Apple iPhone XS Max 256GB",
+        "pris" : "15810",
+        "storlek" : "6,5",
+        "os" : "Apple iOS 12",
+        "pixels" : "1242x2688"
+    },
+    {
+        "marke" : "Honor 10",
+        "model" : "Honor 10 (4GB RAM) 64GB",
+        "pris" : "4006",
+        "storlek" : "5,84",
+        "os" : "Android 8.1",
+        "pixels" : "1080x2280"
+    },
+    {
+        "marke" : "Motorola",
+        "model" : "Motorola Moto G6 Plus (4GB RAM) 64GB",
+        "pris" : "2988",
+        "storlek" : "5,9",
+        "os" : "Android 8.0 (Oreo)",
+        "pixels" : "1080x2160"
+    },
+    {
+        "marke" : "Sony",
+        "model" : "Sony Xperia XZ1 Compact G8441",
+        "pris" : "3485",
+        "storlek" : "4,6",
+        "os" : "Android 8.0 (Oreo)",
+        "pixels" : "720x1280"
+    },
+    {
+        "marke" : "Apple",
+        "model" : "Apple iPhone 7 Plus 32GB",
+        "pris" : "4499",
+        "storlek" : "5,5",
+        "os" : "Apple iOS 12",
+        "pixels" : "1080x1920"
+    }
+]
